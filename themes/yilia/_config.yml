@@ -9,7 +9,7 @@ menu:
   数据结构和算法: /tags/datastructure/
   #设计模式: /tags/designpattern/
   #linux: /tags/linux/
-  #计算机网络: /tags/network/
+  计算机网络: /tags/network/
 # SubNav
 subnav:
   github: "https://github.com/lihaolong"

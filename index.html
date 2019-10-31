@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="李浩龙的个人网站">
+<meta property="og:title" content="talk is cheap &lt;br&#x2F;&gt; show me the code">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="李浩龙的个人网站">
+<meta property="og:site_name" content="talk is cheap &lt;br&#x2F;&gt; show me the code">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李浩龙的个人网站">
+<meta name="twitter:title" content="talk is cheap &lt;br&#x2F;&gt; show me the code">
 
 
 
@@ -121,12 +121,22 @@
 
 
 
-  <title>李浩龙的个人网站</title>
+  <title>talk is cheap <br> show me the code</title>
   
 
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1e08df660c66b0db5f80cee3a9b3c6af";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -152,7 +162,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">李浩龙的个人网站</span>
+        <span class="site-title">talk is cheap <br> show me the code</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -207,16 +217,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            Categories
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -264,11 +264,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -352,8 +352,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/08/2019-09-08-HTTP-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -405,11 +412,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -493,26 +500,16 @@
       
         
           
-            <p>jvm作为java程序运行的基础平台，隐藏了底层操作系统的复杂性，使得java代码可以“一次编译，到处运行”。上层业务开发人员也不用进行处理内存等资源管理工作，提高了开发效率。但是当jvm成为程序性能的瓶颈时，或者程序发生内存溢出等问题时，如果不了解jvm虚拟机的相关知识，就不能很好地对这些问题进行处理。</p>
-<h2 id="一、jvm运行时内存区域"><a href="#一、jvm运行时内存区域" class="headerlink" title="一、jvm运行时内存区域"></a>一、jvm运行时内存区域</h2><h3 id="1-程序计数器"><a href="#1-程序计数器" class="headerlink" title="1.程序计数器"></a>1.程序计数器</h3><p>程序运行的行号指示器，所有线程共享，唯一不会发生OOM的区域。</p>
-<h3 id="2-虚拟机栈"><a href="#2-虚拟机栈" class="headerlink" title="2.虚拟机栈"></a>2.虚拟机栈</h3><p>java方法执行的内存模型，每个线程私有，每个方法对应一个栈帧，栈帧保存了方法执行需要的局部变量表等信息，局部变量表保存了基本数据类型和对象的引用。方法的执行对应入栈和出栈，当请求栈深度大于虚拟机允许的栈深度时，会发生StackOverflowerror，在允许动态扩展的情况下，如果申请不到足够的内存会发生OOM。</p>
-<h3 id="3-本地方法栈"><a href="#3-本地方法栈" class="headerlink" title="3.本地方法栈"></a>3.本地方法栈</h3><p>本地方法栈和虚拟机栈类似，里面存放的是native方法信息。</p>
-<h3 id="4-java堆"><a href="#4-java堆" class="headerlink" title="4.java堆"></a>4.java堆</h3><p>存放java对象的区域，所有线程共享，占用内存最大，垃圾回收的主要区域。</p>
-<h3 id="5-方法区"><a href="#5-方法区" class="headerlink" title="5.方法区"></a>5.方法区</h3><p>主要存放被虚拟机加载的类信息，常量，静态变量等，所有线程共享。</p>
-<h2 id="二、jvm垃圾收集"><a href="#二、jvm垃圾收集" class="headerlink" title="二、jvm垃圾收集"></a>二、jvm垃圾收集</h2><h3 id="1-发现需要收集的对象"><a href="#1-发现需要收集的对象" class="headerlink" title="1.发现需要收集的对象"></a>1.发现需要收集的对象</h3><p>常见的标记需要收集的对象的方法有引用计数和可达性分析</p>
-<ul>
-<li>引用计数：如果一个对象被引用则计数加一，引用失效是减一，最后没有引用的对象标记为可回收。缺点：无法解决循环引用问题。</li>
-<li>可达性分析：从GC Roots开始，向下搜索形成一个引用链。没有被引用链引用的对象是可回收的。</li>
-</ul>
-<h3 id="2-垃圾收集算法"><a href="#2-垃圾收集算法" class="headerlink" title="2.垃圾收集算法"></a>2.垃圾收集算法</h3><ul>
-<li>标记清除算法：对可回收的对象进行标记，最后进行回收。缺点：存在内存碎片。</li>
-<li>复制算法：将内存分为两块区域，使用其中一块，回收时，将不需要回收的放到另一块区域，最后将整个区域回收。优点：没有碎片问题。缺点：空间有浪费。适用于新生代的垃圾收集，因为新生代对象基本朝生夕死，存活的很少。</li>
-<li>标记整理算法：和标记清除类似，添加了整理的步骤，将不需要回收的对象整理到一起，最后回收剩下的区域。</li>
-<li>分代收集：将内存区域分为新生代和老年代，分代采取不同的回收策略，提高回收效率。</li>
-</ul>
-<h3 id="3-垃圾收集器"><a href="#3-垃圾收集器" class="headerlink" title="3.垃圾收集器"></a>3.垃圾收集器</h3><p>垃圾收集器可以分为单线程版本的新生代收集器和老年代收集器，多线程版本的单线程收集器和多线程收集器（这两类收集器在新生代均采用复制算法，在老年代采用标记整理算法），还有CMS收集器和G1收集器。<br>CMS以获得最短停顿时间为目标，采用标记清除算法，缺点对CPU资源敏感。G1收集器主要特点是通过并行和并发缩短停顿时间，同时使用分代收集和标记整理算法。</p>
-
-          
+          jvm作为java程序运行的基础平台，隐藏了底层操作系统的复杂性，使得java代码可以“一次编译，到处运行”。上层业务开发人员也不用进行处理内存等资源管理工作，提高了开发效率。但是当jvm成为程序性能的瓶颈时，或者程序发生内存溢出等问题时，如果不了解jvm虚拟机的相关知识，就不能很好地对这些问题进行处理。
+一、jvm运行时内存区域1.程序计数器程序运行的行号指示器，所有线程共享，唯一不会发生OOM
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/01/2018-08-01-JVM-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -564,11 +561,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -652,15 +649,16 @@
       
         
           
-            <h2 id="一、并发集合"><a href="#一、并发集合" class="headerlink" title="一、并发集合"></a>一、并发集合</h2><h3 id="1-ConcurrentHashMap"><a href="#1-ConcurrentHashMap" class="headerlink" title="1.ConcurrentHashMap"></a>1.ConcurrentHashMap</h3><p>jdk1.7中的ConcurrentHashMap使用了分段锁来保证线程安全，就是把HashMap分成几段，然后对每一段数据加锁后再进行数据操作。<br>而jdk1.8之后是使用synchronize对每一个数据加锁。<br>两者的区别在于分段锁的并发量不如synchronize，适用于并发量小的场景。</p>
-<h3 id="2-ConcurrentLinkedQuene"><a href="#2-ConcurrentLinkedQuene" class="headerlink" title="2.ConcurrentLinkedQuene"></a>2.ConcurrentLinkedQuene</h3><p>线程安全的队列，底层使用CAS和单链表。</p>
-<h3 id="3-CopyOnWriteArrayList"><a href="#3-CopyOnWriteArrayList" class="headerlink" title="3.CopyOnWriteArrayList"></a>3.CopyOnWriteArrayList</h3><p>线程安全的List，底层使用ReentrantLock和数组。读写分离，读时不加锁，写数据时复制到新数组，再指向新数组，这个过程需要加锁。</p>
-<h2 id="二、原子类和锁"><a href="#二、原子类和锁" class="headerlink" title="二、原子类和锁"></a>二、原子类和锁</h2><h3 id="1-常见的原子类和使用场景"><a href="#1-常见的原子类和使用场景" class="headerlink" title="1.常见的原子类和使用场景"></a>1.常见的原子类和使用场景</h3><p>java.util.atomic包里面是常见的原子类，原子类使用CAS保证了一些基本数据类型的常见操作的线程安全，比如修改值，自增等操作。</p>
-<h3 id="2-ReentrantLock"><a href="#2-ReentrantLock" class="headerlink" title="2.ReentrantLock"></a>2.ReentrantLock</h3><p>ReentrantLock是实现线程同步常用的锁，基于AQS。和synchronize相比，ReentrantLock可重入，可实现公平锁，在多线程竞争激烈的情况下性能优于synchronize。</p>
-<h3 id="3-ReadWriteLock"><a href="#3-ReadWriteLock" class="headerlink" title="3.ReadWriteLock"></a>3.ReadWriteLock</h3><p>在读线程多于写线程的时候，读写锁的性能优于普通锁。因为读写锁的读锁可以有多个线程同时获得并进行读操作，而写锁只能有一个线程获得。</p>
-<h2 id="三、其他并发工具类"><a href="#三、其他并发工具类" class="headerlink" title="三、其他并发工具类"></a>三、其他并发工具类</h2><h3 id="1-ThreadLLocal"><a href="#1-ThreadLLocal" class="headerlink" title="1.ThreadLLocal"></a>1.ThreadLLocal</h3><p>ThreadLLocal提供了另一种解决线程同步问题的思路，它保存了同步变量的多个副本，并且和线程对应起来，这样每个线程就拥有了独立的变量而不会相互影响。</p>
-
-          
+          一、并发集合1.ConcurrentHashMapjdk1.7中的ConcurrentHashMap使用了分段锁来保证线程安全，就是把HashMap分成几段，然后对每一段数据加锁后再进行数据操作。而jdk1.8之后是使用synchronize对每一个数据加锁。两者的区别在于分段锁的并发量不如synchronize，适用于并发量小的场景。
+2.ConcurrentLinkedQuene线程安全的队列
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/22/2018-07-22-JUC-3/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -712,11 +710,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -800,37 +798,20 @@
       
         
           
-            <h2 id="一、Executor架构"><a href="#一、Executor架构" class="headerlink" title="一、Executor架构"></a>一、Executor架构</h2><h3 id="1-常见的线程池"><a href="#1-常见的线程池" class="headerlink" title="1.常见的线程池"></a>1.常见的线程池</h3><p>常见的线程池有4种：</p>
-<ol>
-<li>singleThreadPool:只有一个线程的线程池。通过将核心线程和最大线程设为1实现。</li>
-<li>fixedThreadPool:特定数量线程的线程池。通过设置核心线程和最大线程实现。</li>
-<li>cacheThreadPool:无限线程的线程池。设置核心线程为0，阻塞队列为synchronousQueue,最大线程为MAX_INTEGER。</li>
-<li>scheduleThreadPool:定时任务线程池。<br>通过Excutors创建的这4种线程池基本可以满足大部分场景，还可以通过new ThreadPoolExcutor()来自定义参数创建，下面分析参数如何设置。</li>
-</ol>
-<h3 id="2-线程池配置分析"><a href="#2-线程池配置分析" class="headerlink" title="2.线程池配置分析"></a>2.线程池配置分析</h3><ol>
-<li>corePoolSize:核心线程数，也是正常情况下的工作线程数。当接收到任务后如果核心线程不满，就创建线程执行任务。</li>
-<li>BlockingQueue:如果核心线程满了，再提交任务时，将会把任务存放到阻塞队列。</li>
-<li>maximumPoolSize:最大线程数，当阻塞队列满了之后，再提交任务就会继续创建线程知道最大线程数。</li>
-<li>keepAliveTime,TimeUnite:线程存活时间和时间单位。</li>
-<li>threadFactory:创建线程的工厂。</li>
-<li>handler:线程达到最大线程的执行策略：<ul>
-<li>直接丢弃</li>
-<li>丢弃并抛异常</li>
-<li>丢弃队首任务</li>
-<li>由调用线程处理任务</li>
-</ul>
-</li>
-</ol>
-<h3 id="3-Futrue机制"><a href="#3-Futrue机制" class="headerlink" title="3.Futrue机制"></a>3.Futrue机制</h3><p>Future保存了线程池执行任务的返回结果和执行状态，并且当任务提交后会返回一个虚拟的结果，此时可以处理其他操作，可以等到真正的结果返回时再处理。</p>
-<h2 id="二、阻塞队列"><a href="#二、阻塞队列" class="headerlink" title="二、阻塞队列"></a>二、阻塞队列</h2><p>线程池常用的阻塞队列有：</p>
-<ol>
-<li>ArrayBlockingQueue:有界的阻塞队列，底层使用数组实现。</li>
-<li>LinkedBlockingQueue:底层是链表的阻塞队列，可定义界，默认为MAX_INTEGER;</li>
-<li>SynchronousQueue:只能存储一个元素的阻塞队列。</li>
-<li>PriorityBlockingQueue:有顺序的阻塞队列，内部元素许实现comparable接口。</li>
-</ol>
+          一、Executor架构1.常见的线程池常见的线程池有4种：
 
-          
+singleThreadPool:只有一个线程的线程池。通过将核心线程和最大线程设为1实现。
+fixedThreadPool:特定数量线程的线程池。通过设置核心线程和最大线程实现。
+cacheThreadPool:无限线程的线程池。设置核心线程为0，阻塞队列为synchronousQueue,最大线程为MAX_INTEGER。
+sch
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/12/2018-07-12-JUC-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -882,11 +863,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -970,28 +951,16 @@
       
         
           
-            <p>JUC是jdk源码中的java.util.concurrent包的简称，JUC包是java实现高并发的基础，里面包含了很多java高并发的解决方案，大概分为Excutor架构，并发容器，原子类，锁和其他并发工具。Excutor架构提供了多种线程池和阻塞队列，并发容器包括ConcurrentHashMap等线程安全的数据结构，原子类可以实现基本类型赋值的原子操作，锁的实现基础是AQS。</p>
-<p>基于JUC的并发工具基本可以满足大部分的并发需求，线程的创建可以使用线程池，线程之间的同步可以使用锁，线程安全的并发容器提供了线程之间可以共享的数据结构，原子类为一些基本数据类型在多线程之间的共享提供了安全的赋值和更新操作，如果要实现自己的同步器，可以继承AQS类。</p>
-<h2 id="一、Java并发基础"><a href="#一、Java并发基础" class="headerlink" title="一、Java并发基础"></a>一、Java并发基础</h2><h3 id="1-AQS原理和分析"><a href="#1-AQS原理和分析" class="headerlink" title="1.AQS原理和分析"></a>1.AQS原理和分析</h3><p>AQS的核心是Node和Queue，Node保存了线程的状态和其他信息，Queue是Node的队列。AQS中的大部分更新和赋值操作也是基于CAS的，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">private Node enq(final Node node) &#123;</span><br><span class="line"></span><br><span class="line">        for (;;) &#123;</span><br><span class="line"></span><br><span class="line">            Node t = tail;</span><br><span class="line"></span><br><span class="line">            if (t == null) &#123; // Must initialize</span><br><span class="line"></span><br><span class="line">                if (compareAndSetHead(new Node()))</span><br><span class="line"></span><br><span class="line">                    tail = head;</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line"></span><br><span class="line">                node.prev = t;</span><br><span class="line"></span><br><span class="line">                if (compareAndSetTail(t, node)) &#123;</span><br><span class="line"></span><br><span class="line">                    t.next = node;</span><br><span class="line"></span><br><span class="line">                    return t;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>AQS是典型的模板方法模式的运用，只提供了获取锁和释放锁的模板，如果要定义自己的同步器重写这些方法就可以了。ReentrantLock就是使用AQS实现的线程之间同步的功能。</p>
-<h3 id="2-CAS原理和分析"><a href="#2-CAS原理和分析" class="headerlink" title="2.CAS原理和分析"></a>2.CAS原理和分析</h3><p>CAS是compare and swap的简称，是比较并交换的意思。是为了解决为一个变量赋值的原子性操作的问题，核心思想就是用预期值和旧值比较如果相等则把新值赋值给旧值，如果不相等就继续比较直到赋值成功为止。CAS的思想是基于一种乐观的并发策略，就是直接进行赋值操作，如果成功的话那效率是很高的，它省去了阻塞这种线程切换的开销，适用于竞争不是很激烈的并发场景。而像加锁操作则是悲观的并发策略，无论有没有竞争，先加锁再操作，这在竞争激烈的情况下是一种高效合理的策略。</p>
-<h2 id="二、Java内存模型"><a href="#二、Java内存模型" class="headerlink" title="二、Java内存模型"></a>二、Java内存模型</h2><h3 id="1-synchronize"><a href="#1-synchronize" class="headerlink" title="1.synchronize"></a>1.synchronize</h3><p>synchronize是最常用的线程同步机制，被synchronize修饰的方法会在指令层面加入monitorenter和monitorout操作，使得其中的代码只能由一个线程执行。而synchronize（lock）{}相当于锁住了lock对象，保证了只能有一个线程访问lock对象。</p>
-<p>synchronize被认为是重量级锁，而在jdk1.6的优化之后，synchronize的效率提高了很多，主要优化有锁消除，锁粗化，锁自适应自旋，轻量级锁等。</p>
-<h3 id="2-volatile"><a href="#2-volatile" class="headerlink" title="2.volatile"></a>2.volatile</h3><p>被volatile修饰的变量具有内存可见性，java的内存模型有工作内存和主内存之分，工作内存是线程私有的内存，主内存所有线程都可以访问，volatile关键字保证了对其修饰的变量的写可以立刻刷到主内存，这样其他线程读到的值就是最新的了。同时，volatile修饰的变量还有禁止指令重排序的功能，在赋值操作之后会添加内存屏障的指令，使得其他CPU的内存值更新之后才能进行读操作。</p>
-<h3 id="3-线程通信"><a href="#3-线程通信" class="headerlink" title="3.线程通信"></a>3.线程通信</h3><p>对于使用synchronize进行同步的线程，采用wait（）和notifyAll（）进行通信。<br>使用ReentrantLock同步的线程，采用condition对象的await()和signalAll（）方法，而且一个ReentrantLock可以有多个condition对象对应多个信号量。</p>
-<h3 id="4-happens-before"><a href="#4-happens-before" class="headerlink" title="4.happens-before"></a>4.happens-before</h3><p>happens-before规则保证了符合这个规则的代码的执行顺序，常用的规则有：</p>
-<ol>
-<li>保证单线程中的顺序符合程序代码的顺序。</li>
-<li>lock()操作在unlock（）之前。</li>
-<li>volatile写在读之前。</li>
-<li>若A操作在B之前，B在C之前，则A在</li>
-<li><p>…</p>
-<p>还有其他的几个就不列举了，这几个规则的主要作用应该是用来判定指令重排序的，只要不符合这几个规则，那么就可以认为编译后的指令是没有顺序的。</p>
-</li>
-</ol>
-
-          
+          JUC是jdk源码中的java.util.concurrent包的简称，JUC包是java实现高并发的基础，里面包含了很多java高并发的解决方案，大概分为Excutor架构，并发容器，原子类，锁和其他并发工具。Excutor架构提供了多种线程池和阻塞队列，并发容器包括ConcurrentHashMap等线程安全的数据结构，原子类可以实现基本类型赋值的原子操作，锁的实现基础是AQS。
+基于JUC的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/02/2018-07-2-JUC-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1043,11 +1012,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -1131,17 +1100,22 @@
       
         
           
-            <h3 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h3><ul>
-<li>图是有顶点和边组成的，如果边是有方向的，图就是有向图。</li>
-<li>路径是从一个顶点到另一个顶点，经过的边数是路径的长，如果边有权，路径是权的和。</li>
-<li><p>一个图的每一个顶点到其他顶点都存在一条路径，那么这个图就是连通的。</p>
-</li>
-<li><p>邻接矩阵可以用来表示图，如果A[u][v]为true则表示u和v之间有边。</p>
-</li>
-<li>图的邻接表表示是表示出所有邻接的顶点，然后组成一个邻接表。<h3 id="二、经典算法"><a href="#二、经典算法" class="headerlink" title="二、经典算法"></a>二、经典算法</h3><h4 id="1-求单源最短路径的Dijkstra算法"><a href="#1-求单源最短路径的Dijkstra算法" class="headerlink" title="1.求单源最短路径的Dijkstra算法"></a>1.求单源最短路径的Dijkstra算法</h4>求单源最短路径问题经典算法是Dijkstra算法，也是经典的贪婪算法。贪婪算法分阶段处理问题，每个阶段都选择一个当前的最优解，最后的解就有很大可能是最优的。<br>Dijkstra算法求解单源最短路径的步骤是从一个点开始，先找到所有和这个点邻接的点，然后在邻接的点中确定出可以确定的和顶点距离最短路径的点（即确定第一阶段最优解），然后再从确定的点出发，确定出这个点可以确定的邻接点和顶点距离最短路径的点（即确定第二阶段最优解）,然后进行第三阶段······一直到所有点的最短路径都被确定。<h4 id="2-求最小生成树的Prim算法和Kruskal算法"><a href="#2-求最小生成树的Prim算法和Kruskal算法" class="headerlink" title="2.求最小生成树的Prim算法和Kruskal算法"></a>2.求最小生成树的Prim算法和Kruskal算法</h4>Prim算法和Dijkstra算法很相似，只不过是把最优解的确定由和顶点的最短路径改为求到已知的根节点距离最短的节点。而Kruskal算法是改变了贪婪策略，改为连续选择最小权的边，只要不产生圈，就把这条边选定组成最小生成树的边。<h3 id="三、图论的应用"><a href="#三、图论的应用" class="headerlink" title="三、图论的应用"></a>三、图论的应用</h3>在应用图论解决实际问题之前，首先要有从实际问题中抽象出数据结构的能力。常见的可以抽象为图的实际问题有很多，比如城市之间的航线，最短路径算法就可以用来求解城市之间最短航行的最优解，又比如城市之间铺设光缆，最小生成树算法就可以求解出铺设距离最短并且每个城市之间都可以进行通信的最优解。这样的例子还有很多，以上只是很简单直观的抽象，当然还有很多抽象层次更高的实际问题，这就需要对图和图论算法更深入的理解了。</li>
-</ul>
+          一、基本概念
+图是有顶点和边组成的，如果边是有方向的，图就是有向图。
+路径是从一个顶点到另一个顶点，经过的边数是路径的长，如果边有权，路径是权的和。
+一个图的每一个顶点到其他顶点都存在一条路径，那么这个图就是连通的。
 
-          
+邻接矩阵可以用来表示图，如果A[u][v]为true则表示u和v之间有边。
+
+图的邻接表表示是表示出所有邻接的顶点，然后组成一个邻接表。二、经典算法1.求单源最短路径的Dijkst
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/30/2018-06-30-datastructure-4/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1193,11 +1167,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -1281,18 +1255,16 @@
       
         
           
-            <p>排序算法作为算法的基础是学习算法很好的案例。众多的排序算法不仅体现了诸如递归、分治等算法的设计技巧，还包含了优先队列（二叉堆）等数据结构，是算法和数据结构很好的结合。</p>
-<h3 id="一、少量数据的排序算法"><a href="#一、少量数据的排序算法" class="headerlink" title="一、少量数据的排序算法"></a>一、少量数据的排序算法</h3><h4 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h4><p>冒泡排序应该是算法初学者最先接触的排序算法，它很好理解，就是将数从头开始和后面所有的数比较，如果后面的数比本身大或小就交换位置，这样每次就能找出最大或最小的元素，而这些元素也就像冒泡一样的被移动到数组的末尾。经过两个for循环后元素就有序了。核心代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(int i=0;i&lt;a.length;i++)&#123;</span><br><span class="line">    for(int j=i+1;j&lt;a.length;j++)&#123;</span><br><span class="line">        if(a[i]&lt;a[j])&#123;</span><br><span class="line">            swap(a,i,j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>很显然，冒泡排序的时间复杂度是O（N²），如果问题规模很大的话，显然是不适合的。</p>
-<h4 id="2-插入排序"><a href="#2-插入排序" class="headerlink" title="2.插入排序"></a>2.插入排序</h4><p>插入排序的思想也很简单，就是保证前n个数有序，随着n的增大最后整个数组就有序了。那如何保证前n个数有序呢？一次循环就可以搞定了，因为前（n-1）个数是有序的，那么把第n个数插入到合适的位置就可以了，这个插入操作可以通过比较操作完成，如果遇到比第n个数大的就交换，最后就可以将n插入到合适的位置了。核心代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(int i=1;i&lt;a.length;i++)&#123;</span><br><span class="line">    for(int j=0;j&lt;i;j++)&#123;</span><br><span class="line">        if(a[i]&lt;a[j])</span><br><span class="line">            swap(a,i,j);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>插入排序和冒泡排序的时间复杂度一样，对于大规模的排序问题不推荐。</p>
-<h3 id="二、效率比较高的排序算法"><a href="#二、效率比较高的排序算法" class="headerlink" title="二、效率比较高的排序算法"></a>二、效率比较高的排序算法</h3><h4 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1.快速排序"></a>1.快速排序</h4><p>快速排序的思想是找到一个元素，把比这个元素大的元素移动到右边，小的移动到左边，然后递归地重复此过程。核心代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public static int partition(int[] arr, int left, int right) &#123;</span><br><span class="line"> int pivotKey = arr[left];</span><br><span class="line"> int pivotPointer = left;</span><br><span class="line"></span><br><span class="line"> while(left &lt; right) &#123;</span><br><span class="line"> while(left &lt; right &amp;&amp; arr[right] &gt;= pivotKey)</span><br><span class="line"> right --;</span><br><span class="line"> while(left &lt; right &amp;&amp; arr[left] &lt;= pivotKey)</span><br><span class="line"> left ++;</span><br><span class="line"> swap(arr, left, right); //把大的交换到右边，把小的交换到左边。</span><br><span class="line"> &#125;</span><br><span class="line"> swap(arr, pivotPointer, left); //最后把pivot交换到中间</span><br><span class="line"> return left;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> public static void quickSort(int[] arr, int left, int right) &#123;</span><br><span class="line"> if(left &gt;= right)</span><br><span class="line"> return ;</span><br><span class="line"> int pivotPos = partition(arr, left, right);</span><br><span class="line"> //通过上面的partition方法，一次排序后就出现:中间右边的数都比中间的基准数要大、中间左边的数都比中间的基准数要小得规律。这样接下来分两次排序:将中间左边的数进行快速排序、将中间右边的数进行快速排序即可。</span><br><span class="line"> quickSort(arr, left, pivotPos-1);</span><br><span class="line"> quickSort(arr, pivotPos+1, right);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>快速排序的实现稍微复杂，但是效率可以达到O（N㏒（N））</p>
-<h4 id="2-堆排序"><a href="#2-堆排序" class="headerlink" title="2.堆排序"></a>2.堆排序</h4><p>堆排序利用了二叉堆的特性，即二叉堆的所有节点都比它的子节点小，那么根节点就是最小的。每次取根节点，然后对二叉堆进行删除根节点操作，并对删除后的堆重新调整，把最小的元素再次调整到根节点。这样就按可以顺序取出所有元素。</p>
-<h4 id="3-归并排序"><a href="#3-归并排序" class="headerlink" title="3.归并排序"></a>3.归并排序</h4><p>归并排序使用分而治之的思想，将需要排序的元素分成两组，对两组元素进行排序，在这个排序过程中使用递归的思想继续分组和排序，归并排序的核心是合并排好序的两组数据，通过比较对应位置的元素并将这两个元素按顺序存入新数组即可将两组有序数组合并为一个新的有序数组。</p>
-<h4 id="4-希尔排序"><a href="#4-希尔排序" class="headerlink" title="4.希尔排序"></a>4.希尔排序</h4><p>希尔排序又叫缩减增量排序，它先对间隔n的元素进行排序，然后间隔n/2，最后间隔1，这个间隔的选择对排序效率有很大影响</p>
-
-          
+          排序算法作为算法的基础是学习算法很好的案例。众多的排序算法不仅体现了诸如递归、分治等算法的设计技巧，还包含了优先队列（二叉堆）等数据结构，是算法和数据结构很好的结合。
+一、少量数据的排序算法1.冒泡排序冒泡排序应该是算法初学者最先接触的排序算法，它很好理解，就是将数从头开始和后面所有的数比较，如果后面的数比本身大或小就交换位置，这样每次就能找出最大或最小的元素，而这些元素也就像冒泡一样的被移动到数
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/24/2018-06-24-datastructure-3/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1344,11 +1316,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -1432,19 +1404,16 @@
       
         
           
-            <p>查找算法可分为无序查找和有序查找算法，无序查找算法的代表是散列对应jdk中的HashMap的底层算法，它的效率可以达到常数时间。有序查找算法的代表是二分法，通过分治的思想将问题的规模不断缩小，使查找效率达到了logN。</p>
-<h3 id="一、二分查找"><a href="#一、二分查找" class="headerlink" title="一、二分查找"></a>一、二分查找</h3><h4 id="1-非递归的二分查找"><a href="#1-非递归的二分查找" class="headerlink" title="1.非递归的二分查找"></a>1.非递归的二分查找</h4><p>下面copy了一个jdk的Collections类的二分查找算法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">private static &lt;T&gt; int indexedBinarySearch(List&lt;? extends T&gt; l, T key, Comparator&lt;? super T&gt; c) &#123;</span><br><span class="line">    int low = 0;</span><br><span class="line">    int high = l.size()-1;</span><br><span class="line"></span><br><span class="line">    while (low &lt;= high) &#123;</span><br><span class="line">        int mid = (low + high) &gt;&gt;&gt; 1;</span><br><span class="line">        T midVal = l.get(mid);</span><br><span class="line">        int cmp = c.compare(midVal, key);</span><br><span class="line"></span><br><span class="line">        if (cmp &lt; 0)</span><br><span class="line">            low = mid + 1;</span><br><span class="line">        else if (cmp &gt; 0)</span><br><span class="line">            high = mid - 1;</span><br><span class="line">        else</span><br><span class="line"> return mid; // key found</span><br><span class="line">  &#125;</span><br><span class="line">    return -(low + 1);  // key not found </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-递归版本的二分查找"><a href="#2-递归版本的二分查找" class="headerlink" title="2.递归版本的二分查找"></a>2.递归版本的二分查找</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">private static int binarySearch(int[] a,int k,int low,int high,int mid)&#123;</span><br><span class="line">    if(low==high)</span><br><span class="line">        return a[mid]==k?mid:-1;</span><br><span class="line">    if(a[mid]&gt;k)&#123;</span><br><span class="line">        high=mid-1;</span><br><span class="line">        mid=(low+high)/2;</span><br><span class="line">        return binarySearch(a,k,low,high,mid);</span><br><span class="line">    &#125;else if(a[mid]&lt;k)&#123;</span><br><span class="line">        low=mid+1;</span><br><span class="line">        mid=(low+high)/2;</span><br><span class="line">        return binarySearch(a,k,low,high,mid);</span><br><span class="line">    &#125;else if(a[mid]==k)</span><br><span class="line">        return mid;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="二、散列"><a href="#二、散列" class="headerlink" title="二、散列"></a>二、散列</h3><p>散列是一种高效的数据结构，可以认为是一个大小固定的数组，数组的查找时间复杂度为常数时间。要想达到理想的查找效率，数据项在数组中要均匀分布，并且要能很好地处理冲突问题。</p>
-<h4 id="1-散列函数"><a href="#1-散列函数" class="headerlink" title="1.散列函数"></a>1.散列函数</h4><p>有些数据项的键值为整数，可以直接使用简单的散列函数对tablesize求余作为数组下标，tablesize一般选择素数来避免冲突。大部分情况下键值为字符串，这时候散列函数的选择就很重要了。这里copy一个jdk1.8中的HashMap的散列函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">static final int hash(Object key) &#123;</span><br><span class="line">    int h;</span><br><span class="line">    return (key == null) ? 0 : (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个hash函数将key的hashcode的高16位和低16位进行异或运算，保留的hashcode的所有特征。</p>
-<h4 id="2-冲突解决"><a href="#2-冲突解决" class="headerlink" title="2.冲突解决"></a>2.冲突解决</h4><p>冲突解决办法一般有“拉链法”和“线性探测法”。<br>拉链发就是将冲突的元素作为链表的下一个元素添加到冲突的位置，查找时再线性查找，jdk的早期HashMap版本就采用的这种办法，但是当冲突元素较多时，线性查找的效率就会很慢，因此jdk1.8采用了红黑树来存储冲突的元素。<br>线性探测发就是在发生冲突时线性地查找下一个空位置，这样可以使空位置得到很好的利用，但是很可能出现元素分布不均的情况，当某个位置冲突较多时这里附近会堆积大量元素使得再次插入的效率变低。</p>
-<h3 id="三、查找树"><a href="#三、查找树" class="headerlink" title="三、查找树"></a>三、查找树</h3><p>查找树和二分查找有很多相似之处，二叉查找树甚至可以转换为一个数组，它的查找过程和二分查找几乎一样。都是根据元素的有序性通过比较缩小问题的规模，提高查找效率。但是查找树存储的元素更加多样化，更加灵活和方便。<br>由于查找树在最坏的情况下会退化为线性查找，因此就需要维持左右子树的平衡来避免退化。红黑树是一个经典的平衡的树，这里copy一个jdk1.8的TreeMap在插入之后维持平衡的代码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">private void fixAfterInsertion(Entry&lt;K,V&gt; x) &#123;</span><br><span class="line">    x.color = RED;</span><br><span class="line"></span><br><span class="line">    while (x != null &amp;&amp; x != root &amp;&amp; x.parent.color == RED) &#123;</span><br><span class="line">        if (parentOf(x) == leftOf(parentOf(parentOf(x)))) &#123;</span><br><span class="line">            Entry&lt;K,V&gt; y = rightOf(parentOf(parentOf(x)));</span><br><span class="line">            if (colorOf(y) == RED) &#123;</span><br><span class="line">                setColor(parentOf(x), BLACK);</span><br><span class="line">                setColor(y, BLACK);</span><br><span class="line">                setColor(parentOf(parentOf(x)), RED);</span><br><span class="line">                x = parentOf(parentOf(x));</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                if (x == rightOf(parentOf(x))) &#123;</span><br><span class="line">                    x = parentOf(x);</span><br><span class="line">                    rotateLeft(x);</span><br><span class="line">                &#125;</span><br><span class="line">                setColor(parentOf(x), BLACK);</span><br><span class="line">                setColor(parentOf(parentOf(x)), RED);</span><br><span class="line">                rotateRight(parentOf(parentOf(x)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            Entry&lt;K,V&gt; y = leftOf(parentOf(parentOf(x)));</span><br><span class="line">            if (colorOf(y) == RED) &#123;</span><br><span class="line">                setColor(parentOf(x), BLACK);</span><br><span class="line">                setColor(y, BLACK);</span><br><span class="line">                setColor(parentOf(parentOf(x)), RED);</span><br><span class="line">                x = parentOf(parentOf(x));</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                if (x == leftOf(parentOf(x))) &#123;</span><br><span class="line">                    x = parentOf(x);</span><br><span class="line">                    rotateRight(x);</span><br><span class="line">                &#125;</span><br><span class="line">                setColor(parentOf(x), BLACK);</span><br><span class="line">                setColor(parentOf(parentOf(x)), RED);</span><br><span class="line">                rotateLeft(parentOf(parentOf(x)));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    root.color = BLACK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>每次插入元素后，红黑树可能会不平衡，需要通过重新改变元素的颜色和左旋或右旋来维持树的平衡，旋转操作是通过左右子树的元素转移来调整左右子树的高度。</p>
-
-          
+          查找算法可分为无序查找和有序查找算法，无序查找算法的代表是散列对应jdk中的HashMap的底层算法，它的效率可以达到常数时间。有序查找算法的代表是二分法，通过分治的思想将问题的规模不断缩小，使查找效率达到了logN。
+一、二分查找1.非递归的二分查找下面copy了一个jdk的Collections类的二分查找算法123456789101112131415161718private static 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/23/2018-06-23-datastructure-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1496,11 +1465,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -1584,22 +1553,16 @@
       
         
           
-            <p>树作为一种基础的数据结构，在查找算法中有很广泛的应用。其中比较有代表性的有二叉查找树、AVL树、B树、红黑树。AVL树和红黑树利用一些规则实现的树的平衡，使查找的最坏情况得到了控制，B树则通过控制树的高度使得查找的次数控制在一定范围内，在数据库的索引中得到了应用。</p>
-<h2 id="一、树的定义和实现"><a href="#一、树的定义和实现" class="headerlink" title="一、树的定义和实现"></a>一、树的定义和实现</h2><p>对于树的创建一般采用递归的方式。下面copy一个jdk中TreeMap的实现，这里用的是红黑树，不过和一般的树的创建方式大体相同。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">private final Entry&lt;K,V&gt; buildFromSorted(int level, int lo, int hi,</span><br><span class="line"></span><br><span class="line"> int redLevel,</span><br><span class="line"></span><br><span class="line"> Iterator&lt;?&gt; it,</span><br><span class="line"></span><br><span class="line"> java.io.ObjectInputStream str,</span><br><span class="line"></span><br><span class="line"> V defaultVal)</span><br><span class="line"></span><br><span class="line"> throws java.io.IOException, ClassNotFoundException &#123;</span><br><span class="line"></span><br><span class="line"> /**Strategy: The root is the middlemost element. To get to it, we have to first recursively construct the entire left subtree,so as to grab all of its elements. We can then proceed with right subtree.</span><br><span class="line">The lo and hi arguments are the minimum and maximum indices to pull out of the iterator or stream for current subtree.They are not actually indexed, we just proceed sequentially,</span><br><span class="line">ensuring that items are extracted in corresponding order.**/</span><br><span class="line"></span><br><span class="line"> if (hi &lt; lo) return null;</span><br><span class="line"></span><br><span class="line"> int mid = (lo + hi) &gt;&gt;&gt; 1;</span><br><span class="line"></span><br><span class="line"> Entry&lt;K,V&gt; left = null;</span><br><span class="line"></span><br><span class="line"> if (lo &lt; mid)</span><br><span class="line"></span><br><span class="line"> left = buildFromSorted(level+1, lo, mid - 1, redLevel,</span><br><span class="line"></span><br><span class="line"> it, str, defaultVal);</span><br><span class="line"></span><br><span class="line">  // extract key and/or value from iterator or stream</span><br><span class="line"></span><br><span class="line"> K key;</span><br><span class="line"></span><br><span class="line"> V value;</span><br><span class="line"></span><br><span class="line"> if (it != null) &#123;</span><br><span class="line"></span><br><span class="line"> if (defaultVal==null) &#123;</span><br><span class="line"></span><br><span class="line"> Map.Entry&lt;?,?&gt; entry = (Map.Entry&lt;?,?&gt;)it.next();</span><br><span class="line"></span><br><span class="line"> key = (K)entry.getKey();</span><br><span class="line"></span><br><span class="line"> value = (V)entry.getValue();</span><br><span class="line"></span><br><span class="line"> &#125; else &#123;</span><br><span class="line"></span><br><span class="line"> key = (K)it.next();</span><br><span class="line"></span><br><span class="line"> value = defaultVal;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> &#125; else &#123; // use stream</span><br><span class="line"></span><br><span class="line"> key = (K) str.readObject();</span><br><span class="line"></span><br><span class="line"> value = (defaultVal != null ? defaultVal : (V) str.readObject());</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> Entry&lt;K,V&gt; middle = new Entry&lt;&gt;(key, value, null);</span><br><span class="line"></span><br><span class="line">  // color nodes in non-full bottommost level red</span><br><span class="line"></span><br><span class="line"> if (level == redLevel)</span><br><span class="line"></span><br><span class="line"> middle.color = RED;</span><br><span class="line"></span><br><span class="line"> if (left != null) &#123;</span><br><span class="line"></span><br><span class="line"> middle.left = left;</span><br><span class="line"></span><br><span class="line"> left.parent = middle;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> if (mid &lt; hi) &#123;</span><br><span class="line"></span><br><span class="line"> Entry&lt;K,V&gt; right = buildFromSorted(level+1, mid+1, hi, redLevel,</span><br><span class="line"></span><br><span class="line"> it, str, defaultVal);</span><br><span class="line"></span><br><span class="line"> middle.right = right;</span><br><span class="line"></span><br><span class="line"> right.parent = middle;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> return middle;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>创建过程大致如下：</p>
-<ul>
-<li>（1）定义左儿子为下一次递归调用的返回值（即下一次递归的middle节点）</li>
-<li>（2）定义middel节点为（1）中的parent，同时定义middle节点的儿子为（1）</li>
-<li>（3）同样的方式定义右儿子以及其和middle的关系<h2 id="二、二叉查找树"><a href="#二、二叉查找树" class="headerlink" title="二、二叉查找树"></a>二、二叉查找树</h2>二叉查找树是所有节点的左子树的所有节点都比该节点的值小，右子树的所有节点都比该节点的值大。<h3 id="1、常规操作"><a href="#1、常规操作" class="headerlink" title="1、常规操作"></a>1、常规操作</h3></li>
-<li>插入：通过递归查找到一个该值不存在的位置</li>
-<li>删除：如果是树叶直接删除，如果有儿子则需要调整位置，将右子树的最小值调整到该节点<h3 id="2、效率和问题分析"><a href="#2、效率和问题分析" class="headerlink" title="2、效率和问题分析"></a>2、效率和问题分析</h3>最好的情况下即平衡的二叉查找树查找效率可以达到㏒N，但是经过大量的插入和删除操作后树会变得不平衡，这就引出了可以通过调整平衡来避免二叉查找树出现最坏情况的AVL树和红黑树。<h3 id="3、平衡的树"><a href="#3、平衡的树" class="headerlink" title="3、平衡的树"></a>3、平衡的树</h3>AVL树是一种古老的平衡查找树，它需要满足左右两棵子树的高度差不超过1的二叉查找树。AVL树通过旋转来达到平衡，旋转是通过调整节点的位置来使左右子树的高度发生变化。<br>红黑树具有以下性质：</li>
-<li>每一个节点必须着成红色或黑色</li>
-<li>根是黑色的</li>
-<li>如果某节点是红色则其子节点必须是黑色</li>
-<li>从一个节点到null的引用链必须包含相同数目的黑色节点<br>最后两个规则保证了红黑树的子树的高度差在一定的范围内<h2 id="三、B树和索引"><a href="#三、B树和索引" class="headerlink" title="三、B树和索引"></a>三、B树和索引</h2>由于数据存储在磁盘上，而对磁盘的查询非常耗时，就需要一种减少磁盘访问的数据结构来做索引。B树其实就是一棵M阶的二叉查找树，它的节点可以有多个值，也可以有多个子树，这样就降低了树的高度，从而降低的查找次数。</li>
-</ul>
-
-          
+          树作为一种基础的数据结构，在查找算法中有很广泛的应用。其中比较有代表性的有二叉查找树、AVL树、B树、红黑树。AVL树和红黑树利用一些规则实现的树的平衡，使查找的最坏情况得到了控制，B树则通过控制树的高度使得查找的次数控制在一定范围内，在数据库的索引中得到了应用。
+一、树的定义和实现对于树的创建一般采用递归的方式。下面copy一个jdk中TreeMap的实现，这里用的是红黑树，不过和一般的树的创建
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/18/2018-6-18-datastructure-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1651,11 +1614,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="codingli">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="李浩龙的个人网站">
+      <meta itemprop="name" content="talk is cheap <br/> show me the code">
     </span>
 
     
@@ -1739,35 +1702,20 @@
       
         
           
-            <p>java.util包主要包含Collection接口和Map接口。Collection接口主要包含List和Set接口及其抽象类和实现类。Map接口主要包含Map接口的抽象类和实现类。</p>
-<h2 id="一、包的整体结构"><a href="#一、包的整体结构" class="headerlink" title="一、包的整体结构"></a>一、包的整体结构</h2><p><img src="http://45.78.34.36/images/util.jpg" alt="util"></p>
-<h3 id="1、Collection接口"><a href="#1、Collection接口" class="headerlink" title="1、Collection接口"></a>1、Collection接口</h3><p>整体结构分为三层：</p>
-<ul>
-<li>最上层为接口层，定义了规范，有List、Set接口。<br></li>
-<li>中间层为抽象类层，定义了接口的部分实现，添加了相应类的特殊实现，有AbstractCollection、AbstractList、AbstractSet。<br><br></li>
-<li>最下层为实现层，实现了不同数据结构和特性的集合类。<h3 id="2、Map接口"><a href="#2、Map接口" class="headerlink" title="2、Map接口"></a>2、Map接口</h3>Map接口的结构类似于Collection接口（jdk源码的很多实现都采用了抽象骨架类的实现方式）。三层分别为:<br><br></li>
-<li>Map、SortedMap</li>
-<li>AbstractMap</li>
-<li>HashMap、TreeMap、HashTable<h2 id="二、共同点"><a href="#二、共同点" class="headerlink" title="二、共同点"></a>二、共同点</h2></li>
-</ul>
-<h3 id="1、Collection接口及其子接口包含以下最基本的行为："><a href="#1、Collection接口及其子接口包含以下最基本的行为：" class="headerlink" title="1、Collection接口及其子接口包含以下最基本的行为："></a>1、Collection接口及其子接口包含以下最基本的行为：</h3><p><br></p>
-<ul>
-<li>add、addAll</li>
-<li>remove、removeAll：移除另一个集合中包含的元素、clear：移除所有元素</li>
-<li>contains、containsAll</li>
-<li>isEmpty、size</li>
-<li>toArray</li>
-<li>iterator：继承Iterable</li>
-<li>retainAll：取和另一个元素的交集，如果没有则变为空。<h3 id="2、Map接口包含以下基本行为（列出关键方法）："><a href="#2、Map接口包含以下基本行为（列出关键方法）：" class="headerlink" title="2、Map接口包含以下基本行为（列出关键方法）："></a>2、Map接口包含以下基本行为（列出关键方法）：</h3><br></li>
-<li>Entry：Map的一个元素，即键值对。以接口的形式在Map接口中存在</li>
-<li>EntrySet：Entry的Set集合，方便迭代</li>
-<li>values：所有制=值得集合<h2 id="三、不同点"><a href="#三、不同点" class="headerlink" title="三、不同点"></a>三、不同点</h2>java.util包的不同实现主要基于不同的数据结构，也有为了满足线程安全和操作效率而提供了不同的实现。<h3 id="1、数据结构"><a href="#1、数据结构" class="headerlink" title="1、数据结构"></a>1、数据结构</h3></li>
-<li>数组：数组是一个容器，里面包含了同一种数据类型的集合，每个元素都有一个下标，方便查找。Arraylist基于数组，查找快，增删慢。增删需要改变容量。</li>
-<li>链表：链表的每个元素都包含值和指针，双链表包含两个指针。Linkedlist基于链表。链表的增删快，只需要改变指针的指向即可实现。查找需要遍历。<h3 id="2、线程安全"><a href="#2、线程安全" class="headerlink" title="2、线程安全"></a>2、线程安全</h3></li>
-<li>线程安全，但是效率低：一般实现是将需要共享的资源添加synchronize关键字实现多线程同步访问。Vector是线程安全的。</li>
-</ul>
+          java.util包主要包含Collection接口和Map接口。Collection接口主要包含List和Set接口及其抽象类和实现类。Map接口主要包含Map接口的抽象类和实现类。
+一、包的整体结构
+1、Collection接口整体结构分为三层：
 
-          
+最上层为接口层，定义了规范，有List、Set接口。
+中间层为抽象类层，定义了接口的部分实现，添加了相应类的特殊实现，有AbstractColle
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/05/2018-4-5-jdk-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1839,6 +1787,8 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://106.54.216.12:8088/links/admin/13d0a1030113336.jpg" alt="codingli">
             
               <p class="site-author-name" itemprop="name">codingli</p>
               <p class="site-description motion-element" itemprop="description"></p>
